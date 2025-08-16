@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PowerPro Electric | Home</title>
+    <div class="preloader" style="display: none;"></div>
     <link rel="stylesheet" href="styles.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
@@ -20,23 +23,61 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="tel:7718616461" class="call-btn"><i class="fas fa-phone"></i> +917718616461</a></li>
+           
+            <a href ="https://wa.me/+919332461759" class="whatsapp-button" target="_blank">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" /><br>
+  Chat with us
+</a>
+
         </ul>
         <div class="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
+   <!-- WhatsApp Chat Button -->
+<div id="whatsapp-chat">
+  <div id="chat-button">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" />
+    <span>Chat Now</span>
+  </div>
+  <div id="chat-popup">
+    <p>Hello! 👋<br>How can we help you?</p>
+    <a href="https://wa.me/+917718616461?text=Hi%2C%20I%20am%20interested%20in%20your%20service.%20Please%20help%20me." target="_blank">
+  Start Chat on WhatsApp
+</a>
+  </div>
+</div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Professional Electrical Services</h1>
+            <h1>MS Electrical Services</h1>
             <h3>Provider By Habibul Ali Sarder
         
             </h3>
             <p>24/7 emergency services | Licensed & insured | Free estimates</p>
             <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+               <!-- Trigger Button -->
+<button onclick="openForm()">Get a Free Quote</button>
+
+<!-- The Popup Form -->
+<div id="popupForm" class="form-popup">
+  <form id="quoteForm">
+    <h2>Free Quote</h2>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="text" name="service" placeholder="Service Needed" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+    <button type="close" onclick="closeForm()">Close</button>
+  </form>
+</div>
                 <a href="tel:7718616461" class="btn btn-secondary">Call Now</a>
+                
+                <a href ="https://wa.me/+919332461759" class="whatsapp-button" target="_blank">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" /><a/>
+  
+
+
             </div>
         </div>
     </section>
@@ -44,7 +85,7 @@
     <!-- Services Preview -->
     <section class="services-preview">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2><b>Services</b></h2>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-home"></i>
@@ -62,7 +103,7 @@
                     <i class="fas fa-bolt"></i>
                     <h3>Emergency Services</h3>
                     <p>24/7 emergency electrical repairs</p>
-                    <a href="E:\vs code\pp e\emergency-electrical-service.png" class="btn">Learn More</a>
+                    <a img src= "D:\MS ELECTRIC\IMG20220412090101.jpg"> class="btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -75,7 +116,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Electrical Installation">
+                        <img src="" alt="Electrical Installation">
                     </div>
                     <div class="service-content">
                         <h3>Electrical Installation</h3>
@@ -85,7 +126,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Maintenance & Repair">
+                        <img src="" alt="Maintenance & Repair">
                     </div>
                     <div class="service-content">
                         <h3>Maintenance & Repair</h3>
@@ -95,7 +136,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1559302994-5a30f1ad60ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Emergency Services">
+                        <img src="" alt="Emergency Services">
                     </div>
                     <div class="service-content">
                         <h3>Emergency Services</h3>
@@ -127,7 +168,7 @@
         <div class="container">
             <div class="about-content">
                 <h2>About Our Company</h2>
-                <p>With over 21 years of experience, PowerPro Electric provides reliable electrical services for both residential and commercial clients.</p>
+                <p>With over 15 years of experience, PowerPro Electric provides reliable electrical services for both residential and commercial clients.</p>
                 <a href="about.html" class="btn">Learn More About Us</a>
             </div>
         </div>
@@ -140,11 +181,11 @@
             <div class="testimonial-cards">
                 <div class="testimonial">
                     <p>"Fast response and professional service. Fixed my electrical issue in no time!"</p>
-                    <p class="client-name">- Al Modina Academy</p>
+                    <p class="client-name">- Sarah Johnson</p>
                 </div>
                 <div class="testimonial">
                     <p>"The team was knowledgeable and courteous. Highly recommend!"</p>
-                    <p class="client-name">- Daspur B.D.O</p>
+                    <p class="client-name">- Michael Chen</p>
                 </div>
             </div>
         </div>
@@ -171,8 +212,8 @@
                     <h3>Contact Info</h3>
                     <ul>
                         <li><i class="fas fa-phone"></i> 7718616461</li>
-                        <li><i class="fas fa-envelope"></i> powerpro.elc.services@gmail.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Keshpur Paschimi Medinipur,West Bangal </li>
+                        <li><i class="fas fa-envelope"></i> info@powerpro.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Electric Ave, Tech City</li>
                     </ul>
                 </div>
             </div>
