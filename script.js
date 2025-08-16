@@ -1,3 +1,4 @@
+document.querySelector("body > div.boxed_wrapper > div")
 // Mobile Menu Toggle
 const mobileMenu = document.querySelector('.mobile-menu');
 const navLinks = document.querySelector('.nav-links');
@@ -25,12 +26,7 @@ if (contactForm) {
         const service = document.getElementById('service').value;
         const message = document.getElementById('message').value;
         
-        // Here you would typically send the data to your server
-        // For this example, we'll just show an alert
-        alert(`Thank you, ${name}! Your message has been received. We'll contact you soon about your ${service} needs.`);
-        
-        // Reset the form
-        contactForm.reset();
+       
     });
 }
 
@@ -60,3 +56,123 @@ window.addEventListener('scroll', function() {
         navbar.style.boxShadow = 'none';
     }
 });
+
+document.getElementById("chat-button").addEventListener("click", function() {
+  var popup = document.getElementById("chat-popup");
+  if (popup.style.display === "block") {
+    popup.style.display = "none";
+  } else {
+    popup.style.display = "block";
+  }
+});
+
+/*<!-- The Popup Form -->*/
+
+function openForm() {
+  document.getElementById("popupForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+}
+function openForm() {
+      document.getElementById("popupForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("popupForm").style.display = "none";
+    }
+
+    window.onload = function () {
+      setTimeout(function () {
+        document.getElementById("popupForm").style.display = "block";
+      }, 2000);
+    };
+
+    document.getElementById("quoteForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      fetch("YOUR_GOOGLE_SCRIPT_URL", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.text())
+        .then((data) => {
+          alert("Quote sent successfully!");
+          closeForm();
+          document.getElementById("quoteForm").reset();
+        })
+        .catch((err) => {
+          alert("Error sending quote.");
+          console.error(err);
+        });
+    });
+  
+// Auto show popup after 2 seconds
+window.onload = function () {
+  setTimeout(function () {
+    document.getElementById("popupForm").style.display = "block";
+  }, 2000);
+};
+
+// Close popup
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+}
+
+// Submit form to Google Sheets
+document.getElementById("quoteForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  fetch("YOUR_GOOGLE_SCRIPT_URL", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => {
+    alert("Quote sent successfully!");
+    closeForm();
+    document.getElementById("quoteForm").reset();
+  })
+  .catch(err => {
+    alert("Error sending quote.");
+    console.error(err);
+  });
+});
+
+// Show popup automatically after 2 seconds
+window.onload = function () {
+  setTimeout(function () {
+    document.getElementById("popupForm").style.display = "block";
+  }, 2000); // 2 seconds delay
+};
+
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+}
+
+// Form submission
+document.getElementById("quoteForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  fetch("YOUR_GOOGLE_SCRIPT_URL", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => {
+    alert("Quote sent successfully!");
+    closeForm();
+    document.getElementById("quoteForm").reset();
+  })
+  .catch(err => {
+    alert("Error sending quote.");
+    console.error(err);
+  });
+});
+function closePopup() {
+  const popup = document.getElementById("popupForm");
+  popup.style.animation = "popupFadeOut 0.3s ease-in-out";
+  setTimeout(() => popup.style.display = "none", 300);
+}
