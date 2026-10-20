@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>আমাদের কাজ | MS Electric</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div>
+        <span><i class="fas fa-clock"></i> ২৪/৭ জরুরী পরিষেবা</span>
+        <span><i class="fas fa-shield-alt"></i> নির্ভরযোগ্য ও অভিজ্ঞ টিম</span>
+      </div>
+      <div>MS Electric &amp; Suppliers</div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-flex">
+      <a href="index.html" class="logo"><i class="fas fa-bolt"></i> MS <span class="highlight">Electric</span></a>
+      <nav class="nav-container">
+        <ul class="nav-links">
+          <li><a href="index.html">হোম</a></li>
+          <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+          <li><a href="services.html">পরিষেবাসমূহ</a></li>
+          <li><a href="gallery.html">আমাদের কাজ</a></li>
+          <li><a href="contact.html">যোগাযোগ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+917718616461" class="phone-link"><i class="fas fa-phone-alt"></i> +91 7718616461</a>
+        <button class="mobile-menu-toggle" aria-label="মেনু খুলুন" aria-expanded="false"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>আমাদের কাজ</h1>
+      <p>সম্পন্ন কাজের ছবি ও ভিডিও</p>
+    </div>
+  </section>
+
+  <!-- ছবির গ্যালারি
+       নতুন ছবি যোগ করতে একটি <figure class="gallery-item"> ব্লক কপি করে
+       data-cat="wiring | repair | other" এবং ছবির নাম বদলে দিন। -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title">ফটো গ্যালারি</span>
+        <h2>কাজের ছবি</h2>
+        <div class="header-line"></div>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">সব</button>
+        <button class="filter-btn" data-filter="wiring">ওয়ারিং</button>
+        <button class="filter-btn" data-filter="repair">মেরামত</button>
+        <button class="filter-btn" data-filter="other">অন্যান্য</button>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item" data-cat="wiring"><div class="media-slot"><div class="placeholder"><i class="fas fa-image"></i><small>images/gallery-1.jpg</small></div><img src="images/gallery-1.jpg" alt="কাজের ছবি ১" /></div><figcaption>ওয়ারিং</figcaption></figure>
+        <figure class="gallery-item" data-cat="wiring"><div class="media-slot"><div class="placeholder"><i class="fas fa-image"></i><small>images/gallery-2.jpg</small></div><img src="images/gallery-2.jpg" alt="কাজের ছবি ২" /></div><figcaption>ওয়ারিং</figcaption></figure>
+        <figure class="gallery-item" data-cat="wiring"><div class="media-slot"><div class="placeholder"><i class="fas fa-image"></i><small>images/gallery-3.jpg</small></div><img src="images/gallery-3.jpg" alt="কাজের ছবি ৩" /></div><figcaption>ওয়ারিং</figcaption></figure>
+        <figure class="gallery-item" data-cat="repair"><div class="media-slot"><div class="placeholder"><i class="fas fa-image"></i><small>images/gallery-4.jpg</small></div><img src="images/gallery-4.jpg" alt="কাজের ছবি ৪" /></div><figcaption>মেরামত</figcaption></figure>
+        <figure class="gallery-item" data-cat="repair"><div class="media-slot"><div class="placeholder"><i class="fas fa-image"></i><small>images/gallery-5.jpg</small></div><img src="images/gallery-5.jpg" alt="কাজের ছবি ৫" /></div><figcaption>মেরামত</figcaption></figure>
+        <figure class="gallery-item" data-cat="repair"><div class="media-slot"><div class="placeholder"><i class="fas fa-image"></i><small>images/gallery-6.jpg</small></div><img src="images/gallery-6.jpg" alt="কাজের ছবি ৬" /></div><figcaption>মেরামত</figcaption></figure>
+        <figure class="gallery-item" data-cat="other"><div class="media-slot"><div class="placeholder"><i class="fas fa-image"></i><small>images/gallery-7.jpg</small></div><img src="images/gallery-7.jpg" alt="কাজের ছবি ৭" /></div><figcaption>অন্যান্য</figcaption></figure>
+        <figure class="gallery-item" data-cat="other"><div class="media-slot"><div class="placeholder"><i class="fas fa-image"></i><small>images/gallery-8.jpg</small></div><img src="images/gallery-8.jpg" alt="কাজের ছবি ৮" /></div><figcaption>অন্যান্য</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ভিডিও গ্যালারি -->
+  <section class="section video-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title">ভিডিও গ্যালারি</span>
+        <h2>কাজের ভিডিও</h2>
+        <div class="header-line"></div>
+      </div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="media-slot wide"><div class="placeholder"><i class="fas fa-play-circle"></i><span>ভিডিও ১</span><small>videos/gallery-1.mp4</small></div>
+            <video controls preload="metadata" poster="images/gallery-video1.jpg"><source src="videos/gallery-1.mp4" type="video/mp4" /></video></div>
+          <h4>ভিডিও ১ এর শিরোনাম</h4>
+        </div>
+        <div class="video-card">
+          <div class="media-slot wide"><div class="placeholder"><i class="fas fa-play-circle"></i><span>ভিডিও ২</span><small>videos/gallery-2.mp4</small></div>
+            <video controls preload="metadata" poster="images/gallery-video2.jpg"><source src="videos/gallery-2.mp4" type="video/mp4" /></video></div>
+          <h4>ভিডিও ২ এর শিরোনাম</h4>
+        </div>
+        <div class="video-card">
+          <div class="media-slot wide"><div class="placeholder"><i class="fas fa-play-circle"></i><span>ভিডিও ৩</span><small>videos/gallery-3.mp4</small></div>
+            <video controls preload="metadata" poster="images/gallery-video3.jpg"><source src="videos/gallery-3.mp4" type="video/mp4" /></video></div>
+          <h4>ভিডিও ৩ এর শিরোনাম</h4>
+        </div>
+        <div class="video-card">
+          <div class="media-slot wide"><div class="placeholder"><i class="fas fa-play-circle"></i><span>ভিডিও ৪</span><small>videos/gallery-4.mp4</small></div>
+            <video controls preload="metadata" poster="images/gallery-video4.jpg"><source src="videos/gallery-4.mp4" type="video/mp4" /></video></div>
+          <h4>ভিডিও ৪ এর শিরোনাম</h4>
+        </div>
+        <div class="video-card">
+          <div class="media-slot wide"><div class="placeholder"><i class="fas fa-play-circle"></i><span>ভিডিও ৫</span><small>videos/gallery-5.mp4</small></div>
+            <video controls preload="metadata" poster="images/gallery-video5.jpg"><source src="videos/gallery-5.mp4" type="video/mp4" /></video></div>
+          <h4>ভিডিও ৫ এর শিরোনাম</h4>
+        </div>
+        <div class="video-card">
+          <div class="media-slot wide"><div class="placeholder"><i class="fas fa-play-circle"></i><span>ভিডিও ৬</span><small>videos/gallery-6.mp4</small></div>
+            <video controls preload="metadata" poster="images/gallery-video6.jpg"><source src="videos/gallery-6.mp4" type="video/mp4" /></video></div>
+          <h4>ভিডিও ৬ এর শিরোনাম</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container banner-flex">
+      <div>
+        <h2>আপনার কাজটিও এমন নিখুঁত করতে চান?</h2>
+        <p>ফ্রি এস্টিমেটের জন্য এখনই যোগাযোগ করুন।</p>
+      </div>
+      <div class="banner-actions">
+        <a href="contact.html" class="btn btn-light">বুকিং করুন</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><i class="fas fa-bolt"></i> MS <span class="highlight">Electric</span></a>
+        <p>বিশ্বস্ততা ও সুনামের সাথে কেশপুর এবং পশ্চিম মেদিনীপুর এলাকায় নিরাপদ বিদ্যুৎ পরিষেবা দিয়ে আসছি।</p>
+        <p class="licensing-info">পরিচালনায়: <strong>হাবিবুল আলী সর্দার (Habibul Ali Sarder)</strong></p>
+      </div>
+      <div>
+        <h3>গুরুত্বপূর্ণ লিঙ্ক</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">হোম</a></li>
+          <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+          <li><a href="services.html">পরিষেবাসমূহ</a></li>
+          <li><a href="gallery.html">আমাদের কাজ</a></li>
+          <li><a href="contact.html">যোগাযোগ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>যোগাযোগ</h3>
+        <ul class="footer-contact-info">
+          <li><i class="fas fa-phone-alt"></i> +91 7718616461</li>
+          <li><i class="fas fa-envelope"></i> powerpro.elc.services@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> কেশপুর, পশ্চিম মেদিনীপুর, পশ্চিমবঙ্গ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; <span class="js-year">2026</span> MS Electric &amp; Suppliers। সর্বস্বত্ব সংরক্ষিত।</p>
+        <p>সুরক্ষা ও সততাই আমাদের মূল লক্ষ্য।</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-actions">
+    <a href="https://wa.me/917718616461?text=%E0%A6%A8%E0%A6%AE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%BE%E0%A6%B0" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="হোয়াটসঅ্যাপে চ্যাট"><i class="fab fa-whatsapp"></i><span>চ্যাট করুন</span></a>
+    <a href="tel:+917718616461" class="float-btn call" aria-label="কল করুন"><i class="fas fa-phone-alt"></i><span>কল করুন</span></a>
+  </div>
+
+  <div class="lightbox" id="lightbox"><button class="lightbox-close" aria-label="বন্ধ করুন">&times;</button><img src="" alt="" /></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
