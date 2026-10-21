@@ -357,50 +357,58 @@ ul { list-style: none; }
   .float-btn { padding: 14px; }
   .banner-flex { flex-direction: column; text-align: center; }
      }
-/* ---------- CEO Section ---------- */
-.ceo-card {
+/* ---------- Founder & CEO ---------- */
+.leaders-grid {
   display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: 44px;
-  align-items: center;
-  max-width: 960px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
   margin: 0 auto;
+}
+.leader-card {
   background: var(--bg);
   border-radius: 16px;
-  padding: 30px;
-  box-shadow: var(--shadow-md);
-  border-left: 6px solid var(--primary);
-}
-.ceo-photo {
-  border-radius: 14px;
   overflow: hidden;
-  aspect-ratio: 4 / 5;
-  background: #d5dee7;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
+  border-top: 5px solid var(--primary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-.ceo-photo img {
+.leader-photo {
+  position: relative;
+  aspect-ratio: 4 / 4.2;
+  background: linear-gradient(135deg, #e7edf3, #d5dee7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leader-photo i { font-size: 4rem; color: #9aa9b8; }
+.leader-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
 }
-.ceo-role {
-  display: inline-block;
+.leader-info { padding: 26px 24px 30px; display: flex; flex-direction: column; flex: 1; }
+.leader-role {
+  align-self: center;
   background: rgba(255, 152, 0, 0.18);
   color: var(--primary-dark);
-  padding: 5px 16px;
+  padding: 5px 18px;
   border-radius: 50px;
   font-weight: 700;
   font-size: 0.9rem;
   margin-bottom: 12px;
 }
-.ceo-info h3 { font-size: 2rem; color: var(--navy); margin-bottom: 12px; }
-.ceo-info p { color: var(--muted); margin-bottom: 22px; }
-.ceo-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.leader-info h3 { font-size: 1.6rem; color: var(--navy); margin-bottom: 10px; }
+.leader-info p { color: var(--muted); margin-bottom: 16px; flex: 1; }
+.leader-phone { font-weight: 700; color: var(--navy); font-size: 1.1rem; margin-bottom: 16px; }
+.leader-phone i { color: var(--primary); margin-right: 6px; }
+.leader-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 
 @media (max-width: 768px) {
-  .ceo-card { grid-template-columns: 1fr; padding: 20px; text-align: center; gap: 24px; border-left: 0; border-top: 6px solid var(--primary); }
-  .ceo-photo { max-width: 280px; margin: 0 auto; }
-  .ceo-actions { justify-content: center; }
-  .ceo-info h3 { font-size: 1.6rem; }
+  .leaders-grid { grid-template-columns: 1fr; }
 }
