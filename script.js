@@ -1,178 +1,133 @@
-document.querySelector("body > div.boxed_wrapper > div")
-// Mobile Menu Toggle
-const mobileMenu = document.querySelector('.mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+/* MS Electric - Main Script */
+(function () {
+  'use strict';
 
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+  // মোবাইল মেনু
+  var toggle = document.querySelector('.mobile-menu-toggle');
+  var nav = document.querySelector('.nav-container');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var icon = toggle.querySelector('i');
+      if (icon) icon.className = open ? 'fas fa-times' : 'fas fa-bars';
     });
-});
-
-// Contact Form Submission
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-        
-       
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { nav.classList.remove('open'); });
     });
-}
+  }
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 100,
-                behavior: 'smooth'
-            });
-        }
+  // বর্তমান পেজ মেনুতে হাইলাইট
+  var current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  if (current.indexOf('.') === -1) current = 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(function (a) {
+    var href = (a.getAttribute('href') || '').toLowerCase();
+    if (href === current) a.classList.add('active');
+  });
+
+  // স্ক্রল করলে হেডারে ছায়া
+  var header = document.querySelector('.main-header');
+  if (header) {
+    window.addEventListener('scroll', function () {
+      header.style.boxShadow = window.scrollY > 60 ? '0 4px 18px rgba(0,0,0,0.12)' : '';
     });
-});
+  }
 
-// Sticky navbar on scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+  // ছবি/ভিডিও স্লট
+  document.querySelectorAll('.media-slot img').forEach(function (img) {
+    var slot = img.closest('.media-slot');
+    function loaded() { if (slot) slot.classList.add('has-image'); }
+    img.addEventListener('error', function () { img.remove(); });
+    if (img.complete && img.naturalWidth > 0) loaded();
+    img.addEventListener('load', loaded);
+  });
+
+  document.querySelectorAll('.media-slot video').forEach(function (video) {
+    var sources = video.querySelectorAll('source');
+    var failed = 0;
+    function check() {
+      failed++;
+      if (failed >= sources.length) video.remove();
+    }
+    if (sources.length === 0) {
+      video.addEventListener('error', function () { video.remove(); });
     } else {
-        navbar.style.boxShadow = 'none';
+      sources.forEach(function (s) { s.addEventListener('error', check); });
     }
-});
+  });
 
-document.getElementById("chat-button").addEventListener("click", function() {
-  var popup = document.getElementById("chat-popup");
-  if (popup.style.display === "block") {
-    popup.style.display = "none";
-  } else {
-    popup.style.display = "block";
-  }
-});
-
-/*<!-- The Popup Form -->*/
-
-function openForm() {
-  document.getElementById("popupForm").style.display = "block";
-}
-function closeForm() {
-  document.getElementById("popupForm").style.display = "none";
-}
-function openForm() {
-      document.getElementById("popupForm").style.display = "block";
-    }
-
-    function closeForm() {
-      document.getElementById("popupForm").style.display = "none";
-    }
-
-    window.onload = function () {
-      setTimeout(function () {
-        document.getElementById("popupForm").style.display = "block";
-      }, 2000);
-    };
-
-    document.getElementById("quoteForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      fetch("YOUR_GOOGLE_SCRIPT_URL", {
-        method: "POST",
-        body: formData,
-      })
-        .then((res) => res.text())
-        .then((data) => {
-          alert("Quote sent successfully!");
-          closeForm();
-          document.getElementById("quoteForm").reset();
-        })
-        .catch((err) => {
-          alert("Error sending quote.");
-          console.error(err);
-        });
+  // গ্যালারি ফিল্টার
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var items = document.querySelectorAll('.gallery-item[data-cat]');
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var cat = btn.getAttribute('data-filter');
+      items.forEach(function (item) {
+        item.style.display = (cat === 'all' || item.getAttribute('data-cat') === cat) ? '' : 'none';
+      });
     });
-  
-// Auto show popup after 2 seconds
-window.onload = function () {
-  setTimeout(function () {
-    document.getElementById("popupForm").style.display = "block";
-  }, 2000);
-};
-
-// Close popup
-function closeForm() {
-  document.getElementById("popupForm").style.display = "none";
-}
-
-// Submit form to Google Sheets
-document.getElementById("quoteForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const formData = new FormData(this);
-
-  fetch("YOUR_GOOGLE_SCRIPT_URL", {
-    method: "POST",
-    body: formData
-  })
-  .then(res => res.text())
-  .then(data => {
-    alert("Quote sent successfully!");
-    closeForm();
-    document.getElementById("quoteForm").reset();
-  })
-  .catch(err => {
-    alert("Error sending quote.");
-    console.error(err);
   });
-});
 
-// Show popup automatically after 2 seconds
-window.onload = function () {
-  setTimeout(function () {
-    document.getElementById("popupForm").style.display = "block";
-  }, 2000); // 2 seconds delay
-};
+  // লাইটবক্স
+  var lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    var lbImg = lightbox.querySelector('img');
+    document.addEventListener('click', function (e) {
+      var img = e.target.closest('.media-slot.has-image img');
+      if (img && lbImg) {
+        lbImg.src = img.src;
+        lightbox.classList.add('open');
+      } else if (e.target === lightbox || e.target.closest('.lightbox-close')) {
+        lightbox.classList.remove('open');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  }
 
-function closeForm() {
-  document.getElementById("popupForm").style.display = "none";
-}
+  // যোগাযোগ ফর্ম -> হোয়াটসঅ্যাপ
+  var WHATSAPP_NUMBER = '917718616461';
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var get = function (id) {
+        var el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+      };
+      var msg =
+        'নমস্কার, আমি ' + get('name') + '।\n' +
+        'ফোন: ' + get('phone') + '\n' +
+        'এলাকা: ' + get('area') + '\n' +
+        'কাজের ধরন: ' + get('service') + '\n' +
+        'বিবরণ: ' + get('message');
+      window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      contactForm.reset();
+    });
+  }
 
-// Form submission
-document.getElementById("quoteForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const formData = new FormData(this);
-
-  fetch("YOUR_GOOGLE_SCRIPT_URL", {
-    method: "POST",
-    body: formData
-  })
-  .then(res => res.text())
-  .then(data => {
-    alert("Quote sent successfully!");
-    closeForm();
-    document.getElementById("quoteForm").reset();
-  })
-  .catch(err => {
-    alert("Error sending quote.");
-    console.error(err);
+  // ফুটারে বছর
+  document.querySelectorAll('.js-year').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
   });
-});
-function closePopup() {
-  const popup = document.getElementById("popupForm");
-  popup.style.animation = "popupFadeOut 0.3s ease-in-out";
-  setTimeout(() => popup.style.display = "none", 300);
-}
+
+  // স্ক্রল করলে ধীরে ধীরে দেখানো (না চললেও দেড় সেকেন্ডে সব দেখা যায়)
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { io.observe(el); });
+    setTimeout(function () { reveals.forEach(function (el) { el.classList.add('visible'); }); }, 1500);
+  } else {
+    reveals.forEach(function (el) { el.classList.add('visible'); });
+  }
+})();
