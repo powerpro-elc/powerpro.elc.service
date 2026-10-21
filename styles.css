@@ -357,3 +357,50 @@ ul { list-style: none; }
   .float-btn { padding: 14px; }
   .banner-flex { flex-direction: column; text-align: center; }
      }
+/* ---------- CEO Section ---------- */
+.ceo-card {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 44px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: var(--shadow-md);
+  border-left: 6px solid var(--primary);
+}
+.ceo-photo {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: #d5dee7;
+  box-shadow: var(--shadow-sm);
+}
+.ceo-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.ceo-role {
+  display: inline-block;
+  background: rgba(255, 152, 0, 0.18);
+  color: var(--primary-dark);
+  padding: 5px 16px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+.ceo-info h3 { font-size: 2rem; color: var(--navy); margin-bottom: 12px; }
+.ceo-info p { color: var(--muted); margin-bottom: 22px; }
+.ceo-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 768px) {
+  .ceo-card { grid-template-columns: 1fr; padding: 20px; text-align: center; gap: 24px; border-left: 0; border-top: 6px solid var(--primary); }
+  .ceo-photo { max-width: 280px; margin: 0 auto; }
+  .ceo-actions { justify-content: center; }
+  .ceo-info h3 { font-size: 1.6rem; }
+}
