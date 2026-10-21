@@ -1,179 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerPro Electric | Electrical Services</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>পরিষেবাসমূহ | MS Electric</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">Power<span>Pro</span> Electric</a>
-            <div id="authorised">
-                <p><b>Authorised By MS Electric & Suppliers</b></p>
-            </div>
-        </div>
+
+  <div class="top-bar">
+    <div class="container">
+      <div>
+        <span><i class="fas fa-clock"></i> ২৪/৭ জরুরী পরিষেবা</span>
+        <span><i class="fas fa-shield-alt"></i> নির্ভরযোগ্য ও অভিজ্ঞ টিম</span>
+      </div>
+      <div>MS Electric &amp; Suppliers</div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-flex">
+      <a href="index.html" class="logo"><i class="fas fa-bolt"></i> MS <span class="highlight">Electric</span></a>
+      <nav class="nav-container">
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html" class="active">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="tel:+917718616461" class="call-btn"><i class="fas fa-phone"></i> +91 7718616461</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="mobile-menu" aria-label="Toggle navigation menu" role="button">
-            <i class="fas fa-bars"></i>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+917718616461" class="phone-link"><i class="fas fa-phone-alt"></i> +91 7718616461</a>
+        <a href="https://forms.gle/Dumf6BocTDJN1jWL7" target="_blank" rel="noopener" class="btn btn-booking btn-sm">Book Now</a>
+        <button class="mobile-menu-toggle" aria-label="মেনু খুলুন" aria-expanded="false"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>আমাদের পরিষেবাসমূহ</h1>
+      <p>বাড়ি, দোকান ও বাণিজ্যিক প্রতিষ্ঠানের সব ইলেকট্রিক কাজ এক জায়গায়</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- ১. ওয়ারিং -->
+      <div class="service-row" id="wiring">
+        <div class="service-info">
+          <h2><i class="fas fa-home"></i> নতুন ইলেকট্রিক ওয়ারিং</h2>
+          <p>নতুন বাড়ি, ফ্ল্যাট, দোকান বা অফিসের সম্পূর্ণ ইলেকট্রিক কাজ পরিকল্পনা মেনে নিখুঁতভাবে করা হয়।</p>
+          <ul class="check-list">
+            <li>পাইপ ফিটিং ও কনসিলড ওয়ারিং</li>
+            <li>হাউস ওয়ারিং ও বোর্ড ফিটিং</li>
+            <li>লাইট, ফ্যান ও এক্সহস্ট ফ্যান ইনস্টলেশন</li>
+            <li>মিটার বোর্ড ও মেইন সুইচ সেটআপ</li>
+            <li>আর্থিং ও MCB/DB বক্স ফিটিং</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">এস্টিমেট চান</a>
         </div>
-    </nav>
-
-    <!-- Services Hero -->
-    <section class="page-hero services-hero">
-        <div class="container">
-            <h1>Our Electrical Services</h1>
-            <p>Professional solutions for all your electrical needs</p>
+        <div class="service-media">
+          <div class="media-slot">
+            <div class="placeholder"><i class="fas fa-image"></i><span>ছবি যোগ করুন</span><small>images/wiring-1.jpg</small></div>
+            <img src="images/wiring-1.jpg" alt="ইলেকট্রিক ওয়ারিং" />
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Detailed Services Page Content -->
-    <section class="services-page">
-        <div class="container">
-            <div class="service-category" id="residential">
-                <div class="service-info">
-                    <h2><i class="fas fa-home"></i> Residential Electrical</h2>
-                    <p>We provide comprehensive electrical services for homes, ensuring safety and efficiency in every project. Our certified electricians handle everything from simple repairs to complete home rewiring.</p>
-                    <ul>
-                        <li>Electrical wiring and rewiring</li>
-                        <li>Lighting installation and upgrades</li>
-                        <li>Electrical panel upgrades</li>
-                        <li>Outlet and switch installation</li>
-                        <li>Home automation systems</li>
-                    </ul>
-                    <a href="contact.html" class="btn">Request Service</a>
-                </div>
-                <div class="service-image">
-                    <img src="images/residential.jpg" alt="Residential Electrical Installation">
-                </div>
-            </div>
-
-            <div class="service-category" id="commercial">
-                <div class="service-image">
-                    <img src="images/commercial.jpg" alt="Commercial Electrical Panel">
-                </div>
-                <div class="service-info">
-                    <h2><i class="fas fa-building"></i> Commercial Electrical</h2>
-                    <p>Our commercial electrical services are designed to keep your business running smoothly with minimal downtime. We work with offices, retail spaces, and industrial facilities.</p>
-                    <ul>
-                        <li>Commercial lighting installation</li>
-                        <li>Electrical system maintenance</li>
-                        <li>Data and communication wiring</li>
-                        <li>Energy efficiency upgrades</li>
-                        <li>Generator installation</li>
-                    </ul>
-                    <a href="contact.html" class="btn">Request Service</a>
-                </div>
-            </div>
-
-            <div class="service-category" id="emergency">
-                <div class="service-info">
-                    <h2><i class="fas fa-bolt"></i> Emergency Services</h2>
-                    <p>Electrical emergencies can happen at any time. Our team is available 24/7 to handle urgent electrical issues and prevent potential hazards.</p>
-                    <ul>
-                        <li>Power outage troubleshooting</li>
-                        <li>Electrical sparking or smoking</li>
-                        <li>Tripped circuit breakers</li>
-                        <li>Burning smells from outlets</li>
-                        <li>Flickering or dimming lights</li>
-                    </ul>
-                    <a href="tel:+917718616461" class="btn btn-emergency"><i class="fas fa-phone"></i> Call Now: +91 7718616461</a>
-                </div>
-                <div class="service-image">
-                    <img src="images/emergency.jpg" alt="Emergency Electrician Service">
-                </div>
-            </div>
+      <!-- ২. মেরামত -->
+      <div class="service-row reverse" id="repair">
+        <div class="service-info">
+          <h2><i class="fas fa-tools"></i> মেরামত ও ফল্ট চেকিং</h2>
+          <p>পুরোনো লাইনের সমস্যা দ্রুত খুঁজে বের করে নিরাপদে সমাধান করা হয়।</p>
+          <ul class="check-list">
+            <li>শর্ট সার্কিট ও লিকেজ খোঁজা</li>
+            <li>পুড়ে যাওয়া ওয়্যারিং মেরামত</li>
+            <li>মেইন সুইচ, চেঞ্জওভার ও MCB পরিবর্তন</li>
+            <li>লোড বাড়ানো ও লাইন আপগ্রেড</li>
+            <li>সুইচ বোর্ড ও সকেট মেরামত</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">যোগাযোগ করুন</a>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Us</h2>
-                <p>We deliver exceptional electrical services with these key benefits</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>Certified Electricians</h3>
-                    <p>All our technicians are licensed and continuously trained in the latest electrical standards and safety protocols.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Fully Insured</h3>
-                    <p>Complete liability coverage gives you peace of mind that your property is protected during all our work.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
-                    <h3>24/7 Availability</h3>
-                    <p>Emergency services available around the clock because electrical issues don't always happen during business hours.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-award"></i></div>
-                    <h3>100% Satisfaction</h3>
-                    <p>We stand behind our work with comprehensive warranties and guarantee your complete satisfaction.</p>
-                </div>
-            </div>
+        <div class="service-media">
+          <div class="media-slot">
+            <div class="placeholder"><i class="fas fa-image"></i><span>ছবি যোগ করুন</span><small>images/repair-1.jpg</small></div>
+            <img src="images/repair-1.jpg" alt="মেরামত ও ফল্ট চেকিং" />
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Single Consolidated CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Power Your Property Safely?</h2>
-            <p>Contact us today for a free consultation and estimate. Our team is standing by to help with all your electrical needs.</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-large">Get a Free Quote</a>
-                <a href="tel:+917718616461" class="btn btn-large btn-secondary"><i class="fas fa-phone"></i> Call Now</a>
-            </div>
+      <!-- ৩. ইমার্জেন্সি -->
+      <div class="service-row" id="emergency">
+        <div class="service-info">
+          <h2><i class="fas fa-bolt"></i> ২৪/৭ ইমার্জেন্সি সার্ভিস</h2>
+          <p>হঠাৎ বিদ্যুতের সমস্যা হলে দেরি না করে সরাসরি কল করুন।</p>
+          <ul class="check-list">
+            <li>হঠাৎ লাইন বন্ধ বা ট্রিপ করলে</li>
+            <li>মিটার বা মেইন লাইনে সমস্যা</li>
+            <li>স্পার্কিং বা পোড়া গন্ধ পেলে</li>
+            <li>রাতে ও ছুটির দিনেও পরিষেবা</li>
+          </ul>
+          <a href="tel:+917718616461" class="btn btn-emergency"><i class="fas fa-phone-alt"></i> জরুরী কল করুন</a>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>PowerPro Electric</h3>
-                    <p>Licensed, bonded, and insured electrical contractors serving the community since 2008.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +91 7718616461</li>
-                        <li><i class="fas fa-envelope"></i> info@powerpro.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Electric Ave, Tech City</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2026 PowerPro Electric. All rights reserved.</p>
-            </div>
+        <div class="service-media">
+          <div class="media-slot">
+            <div class="placeholder"><i class="fas fa-image"></i><span>ছবি যোগ করুন</span><small>images/emergency-1.jpg</small></div>
+            <img src="images/emergency-1.jpg" alt="ইমার্জেন্সি সার্ভিস" />
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- ৪. সাপ্লাই -->
+      <div class="service-row reverse" id="supplies">
+        <div class="service-info">
+          <h2><i class="fas fa-box-open"></i> ইলেকট্রিক সামগ্রী সরবরাহ</h2>
+          <p>MS Electric &amp; Suppliers-এর মাধ্যমে মানসম্মত ইলেকট্রিক সামগ্রী পাওয়া যায়।</p>
+          <ul class="check-list">
+            <li>তার, সুইচ, সকেট ও বোর্ড</li>
+            <li>MCB, DB বক্স ও পাইপ-ফিটিংস</li>
+            <li>লাইট, ফ্যান ও অন্যান্য সরঞ্জাম</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">দাম জানতে যোগাযোগ করুন</a>
+        </div>
+        <div class="service-media">
+          <div class="media-slot">
+            <div class="placeholder"><i class="fas fa-image"></i><span>ছবি যোগ করুন</span><small>images/supplies-1.jpg</small></div>
+            <img src="images/supplies-1.jpg" alt="ইলেকট্রিক সামগ্রী" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- কাজের ভিডিও -->
+  <section class="section video-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>কাজের ভিডিও</h2>
+        <div class="header-line"></div>
+        <p>আমাদের কাজের ধরন ভিডিওতে দেখুন।</p>
+      </div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="media-slot wide">
+            <div class="placeholder"><i class="fas fa-play-circle"></i><span>ভিডিও ১</span><small>videos/service1.mp4</small></div>
+            <video controls preload="metadata" poster="images/service-video1.jpg"><source src="videos/service1.mp4" type="video/mp4" /></video>
+          </div>
+          <h4>ওয়ারিং-এর কাজ</h4>
+        </div>
+        <div class="video-card">
+          <div class="media-slot wide">
+            <div class="placeholder"><i class="fas fa-play-circle"></i><span>ভিডিও ২</span><small>videos/service2.mp4</small></div>
+            <video controls preload="metadata" poster="images/service-video2.jpg"><source src="videos/service2.mp4" type="video/mp4" /></video>
+          </div>
+          <h4>মেরামতের কাজ</h4>
+        </div>
+        <div class="video-card">
+          <div class="media-slot wide">
+            <div class="placeholder"><i class="fas fa-play-circle"></i><span>ভিডিও ৩</span><small>videos/service3.mp4</small></div>
+            <video controls preload="metadata" poster="images/service-video3.jpg"><source src="videos/service3.mp4" type="video/mp4" /></video>
+          </div>
+          <h4>ইমার্জেন্সি সার্ভিস</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container banner-flex">
+      <div>
+        <h2>ফ্রি এস্টিমেটের জন্য আজই জানান</h2>
+        <p>আপনার কাজের বিবরণ পাঠান, আমরা দ্রুত যোগাযোগ করব।</p>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:+917718616461" class="btn btn-light"><i class="fas fa-phone-alt"></i> কল করুন</a>
+        <a href="contact.html" class="btn btn-outline">বুকিং করুন</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><i class="fas fa-bolt"></i> MS <span class="highlight">Electric</span></a>
+        <p>বিশ্বস্ততা ও সুনামের সাথে কেশপুর এবং পশ্চিম মেদিনীপুর এলাকায় নিরাপদ বিদ্যুৎ পরিষেবা দিয়ে আসছি।</p>
+        <p class="licensing-info">পরিচালনায়: <strong>হাবিবুল আলী সর্দার (Habibul Ali Sarder)</strong></p>
+      </div>
+      <div>
+        <h3>গুরুত্বপূর্ণ লিঙ্ক</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>যোগাযোগ</h3>
+        <ul class="footer-contact-info">
+          <li><i class="fas fa-phone-alt"></i> +91 77186 16461 (CEO)</li>
+          <li><i class="fas fa-phone-alt"></i> +91 96354 34225 (Founder)</li>
+          <li><i class="fas fa-envelope"></i> powerpro.elc.services@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> কেশপুর, পশ্চিম মেদিনীপুর, পশ্চিমবঙ্গ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; <span class="js-year">2026</span> MS Electric &amp; Suppliers। সর্বস্বত্ব সংরক্ষিত।</p>
+        <p>সুরক্ষা ও সততাই আমাদের মূল লক্ষ্য।</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-actions">
+    <a href="https://wa.me/917718616461?text=%E0%A6%A8%E0%A6%AE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%BE%E0%A6%B0" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="হোয়াটসঅ্যাপে চ্যাট"><i class="fab fa-whatsapp"></i><span>চ্যাট করুন</span></a>
+    <a href="tel:+917718616461" class="float-btn call" aria-label="কল করুন"><i class="fas fa-phone-alt"></i><span>কল করুন</span></a>
+  </div>
+
+  <div class="lightbox" id="lightbox"><button class="lightbox-close" aria-label="বন্ধ করুন">&times;</button><img src="" alt="" /></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
