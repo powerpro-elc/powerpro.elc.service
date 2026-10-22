@@ -1,165 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerPro Electric | Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>যোগাযোগ | MS Electric</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">  &nbsp;   Power<span>Pro</span> Electric</a>
-           <div id="authorised"> <p><b>Authorised By MS Electric & Supliers</b></p></div>
-        </div>
+
+  <div class="top-bar">
+    <div class="container">
+      <div>
+        <span><i class="fas fa-clock"></i> ২৪/৭ জরুরী পরিষেবা</span>
+        <span><i class="fas fa-shield-alt"></i> নির্ভরযোগ্য ও অভিজ্ঞ টিম</span>
+      </div>
+      <div>MS Electric &amp; Suppliers</div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-flex">
+      <a href="index.html" class="logo"><i class="fas fa-bolt"></i> MS <span class="highlight">Electric</span></a>
+      <nav class="nav-container">
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="tel:7718616461" class="call-btn"><i class="fas fa-phone"></i> +917718616461</a></li>
+          <li><a href="index.html">হোম</a></li>
+          <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+          <li><a href="services.html">পরিষেবাসমূহ</a></li>
+          <li><a href="gallery.html">আমাদের কাজ</a></li>
+          <li><a href="contact.html">যোগাযোগ</a></li>
         </ul>
-        <div class="mobile-menu">
-            <i class="fas fa-bars"></i>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+917718616461" class="phone-link"><i class="fas fa-phone-alt"></i> +91 7718616461</a>
+        <button class="mobile-menu-toggle" aria-label="মেনু খুলুন" aria-expanded="false"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>যোগাযোগ করুন</h1>
+      <p>ফ্রি এস্টিমেট ও পরামর্শের জন্য আমাদের জানান</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+
+      <div class="contact-info-card">
+        <h3>যোগাযোগের তথ্য</h3>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+          <div><strong>ফোন</strong><a href="tel:+917718616461">+91 7718616461</a></div>
         </div>
-    </nav>
-
-    <!-- Contact Hero -->
-    <section class="page-hero contact-hero">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p>Get in touch with our team of experts</p>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+          <div><strong>হোয়াটসঅ্যাপ</strong><a href="https://wa.me/917718616461" target="_blank" rel="noopener">+91 7718616461</a></div>
         </div>
-    </section>
-
-    <!-- Contact Content -->
-    <section class="contact-content">
-        <div class="container">
-            <div class="contact-info">
-                <h2>Get in Touch</h2>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <p><a href="tel:7718616461">7718616461</a></p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <p><a href="mailto:info@powerpro.com">info@powerpro.com</a></p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>123 Electric Avenue, Tech City, TC 10001</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <p>Monday-Friday: 8am-6pm<br>Emergency Services: 24/7</p>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Needed</label>
-                        <select id="service" name="service">
-                            <option value="">Select a service</option>
-                            <option value="residential">Residential Electrical</option>
-                            <option value="commercial">Commercial Electrical</option>
-                            <option value="emergency">Emergency Service</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-large">Send Message</button>
-                </form>
-            </div>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+          <div><strong>ইমেইল</strong><a href="mailto:powerpro.elc.services@gmail.com">powerpro.elc.services@gmail.com</a></div>
         </div>
-    </section>
-
-    <!-- Map -->
-    <section class="map-section">
-        <iframe src="AIzaSyBAdEVEMR-A5sM_tJtDaRM714MiyqmguqU" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-        </iframe>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>PowerPro Electric</h3>
-                    <p>Licensed, bonded, and insured electrical contractors serving the community since 2008.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> 7718616461</li>
-                        <li><i class="fas fa-envelope"></i> info@powerpro.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Electric Ave, Tech City</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 PowerPro Electric. All rights reserved.</p>
-            </div>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><strong>ঠিকানা</strong><span>কেশপুর, পশ্চিম মেদিনীপুর, পশ্চিমবঙ্গ</span></div>
         </div>
-    </footer>
-  <div id="map" style="height: 400px; width: 100%;"></div>
-  
-  <!-- ম্যাপের জায়গা: উচ্চতা দেওয়া থাকতেই হবে -->
-<div class="container map-slot">
-  <div id="map" style="width:100%; height:400px; border-radius:12px;"></div>
-</div>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-clock"></i></div>
+          <div><strong>সেবার সময়</strong><span>২৪/৭ জরুরী পরিষেবা</span></div>
+        </div>
+        <a href="tel:+917718616461" class="btn btn-emergency"><i class="fas fa-phone-alt"></i> জরুরী কল করুন</a>
+      </div>
 
-<script>
-  function initMap() {
-    const shop = { lat: 22.5571931, lng: 87.4599564 };
-    const map = new google.maps.Map(document.getElementById("map"), {
-      center: shop,
-      zoom: 17,
-    });
-    new google.maps.Marker({ position: shop, map: map, title: "MS Electric" });
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=আপনার_কী&callback=initMap" async defer></script>
+      <div class="contact-form-card" id="book">
+        <h3>বুকিং / এস্টিমেটের অনুরোধ</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">আপনার নাম</label>
+            <input type="text" id="name" name="name" required placeholder="নাম লিখুন" />
+          </div>
+          <div class="form-group">
+            <label for="phone">ফোন নম্বর</label>
+            <input type="tel" id="phone" name="phone" required placeholder="যেমন: 98XXXXXXXX" />
+          </div>
+          <div class="form-group">
+            <label for="area">এলাকা / গ্রাম</label>
+            <input type="text" id="area" name="area" placeholder="যেমন: কেশপুর" />
+          </div>
+          <div class="form-group">
+            <label for="service">কাজের ধরন</label>
+            <select id="service" name="service" required>
+              <option value="নতুন ইলেকট্রিক ওয়ারিং">নতুন ইলেকট্রিক ওয়ারিং</option>
+              <option value="মেরামত ও ফল্ট চেকিং">মেরামত ও ফল্ট চেকিং</option>
+              <option value="জরুরী সার্ভিস">জরুরী সার্ভিস</option>
+              <option value="ইলেকট্রিক সামগ্রী">ইলেকট্রিক সামগ্রী</option>
+              <option value="অন্যান্য">অন্যান্য</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">কাজের বিবরণ</label>
+            <textarea id="message" name="message" rows="4" placeholder="কী কাজ করাতে চান সংক্ষেপে লিখুন"></textarea>
+          </div>
+          <button type="submit" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> হোয়াটসঅ্যাপে পাঠান</button>
+          <p class="form-note">বোতামে চাপলে আপনার তথ্য সহ হোয়াটসঅ্যাপ খুলবে, সেখান থেকে মেসেজ পাঠিয়ে দিন।</p>
+        </form>
+      </div>
+    </div>
 
+    <!-- গুগল ম্যাপ: Google Maps থেকে Share → Embed a map → iframe কোড কপি করে নিচের placeholder-এর জায়গায় বসান -->
+    <div class="container map-slot">
+      <div class="media-slot">
+        <div class="placeholder"><i class="fas fa-map-marked-alt"></i><span>এখানে গুগল ম্যাপ যোগ করুন</span></div>
+        <!-- <iframe src="গুগল ম্যাপ এমবেড লিংক" loading="lazy" allowfullscreen></iframe> -->
+      </div>
+    </div>
+  </section>
 
+  <!-- কাজের আবেদন -->
+  <section class="section section-white" id="apply">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title">ক্যারিয়ার</span>
+        <h2>আমাদের টিমে যোগ দিন</h2>
+        <div class="header-line"></div>
+        <p>আপনি যদি দক্ষ ইলেকট্রিশিয়ান হন, নিজের নাম, অভিজ্ঞতা ও ফোন নম্বর আমাদের হোয়াটসঅ্যাপে পাঠান।</p>
+      </div>
+      <div style="text-align:center">
+        <a href="https://wa.me/917718616461?text=%E0%A6%B8%E0%A6%B9%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A7%80%20%E0%A6%B9%E0%A6%BF%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A7%87%20%E0%A6%95%E0%A6%BE%E0%A6%9C%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener" class="btn btn-dark"><i class="fab fa-whatsapp"></i> আবেদন পাঠান</a>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><i class="fas fa-bolt"></i> MS <span class="highlight">Electric</span></a>
+        <p>বিশ্বস্ততা ও সুনামের সাথে কেশপুর এবং পশ্চিম মেদিনীপুর এলাকায় নিরাপদ বিদ্যুৎ পরিষেবা দিয়ে আসছি।</p>
+        <p class="licensing-info">পরিচালনায়: <strong>হাবিবুল আলী সর্দার (Habibul Ali Sarder)</strong></p>
+      </div>
+      <div>
+        <h3>গুরুত্বপূর্ণ লিঙ্ক</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">হোম</a></li>
+          <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+          <li><a href="services.html">পরিষেবাসমূহ</a></li>
+          <li><a href="gallery.html">আমাদের কাজ</a></li>
+          <li><a href="contact.html">যোগাযোগ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>যোগাযোগ</h3>
+        <ul class="footer-contact-info">
+          <li><i class="fas fa-phone-alt"></i> +91 7718616461</li>
+          <li><i class="fas fa-envelope"></i> powerpro.elc.services@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> কেশপুর, পশ্চিম মেদিনীপুর, পশ্চিমবঙ্গ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; <span class="js-year">2026</span> MS Electric &amp; Suppliers। সর্বস্বত্ব সংরক্ষিত।</p>
+        <p>সুরক্ষা ও সততাই আমাদের মূল লক্ষ্য।</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-actions">
+    <a href="https://wa.me/917718616461?text=%E0%A6%A8%E0%A6%AE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%BE%E0%A6%B0" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="হোয়াটসঅ্যাপে চ্যাট"><i class="fab fa-whatsapp"></i><span>চ্যাট করুন</span></a>
+    <a href="tel:+917718616461" class="float-btn call" aria-label="কল করুন"><i class="fas fa-phone-alt"></i><span>কল করুন</span></a>
+  </div>
+
+  <div class="lightbox" id="lightbox"><button class="lightbox-close" aria-label="বন্ধ করুন">&times;</button><img src="" alt="" /></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
