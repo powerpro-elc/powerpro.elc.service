@@ -11,6 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
+    <!-- ফোনে খুললে মোবাইল ভার্সনে পাঠায় (ডেস্কটপ বেছে নিলে পাঠায় না) -->
+  <script>
+    try {
+      if (window.innerWidth <= 768 && localStorage.getItem('msView') !== 'desktop') {
+        location.replace('index-m.html');
+      }
+    } catch (e) {}
+  </script>
 </head>
 <body>
 
