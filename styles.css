@@ -342,9 +342,14 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
 }
-.leader-photo { aspect-ratio: auto; }
-.leader-photo img { position: static; height: auto; object-fit: contain; }
-.leader-photo i { display: none; }
+.leader-photo {
+  position: relative;
+  aspect-ratio: 4 / 4.2;
+  background: linear-gradient(135deg, #e7edf3, #d5dee7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .leader-photo i { font-size: 4rem; color: #9aa9b8; }
 .leader-photo img {
   position: absolute;
@@ -353,7 +358,7 @@ ul { list-style: none; }
   height: 100%;
   object-fit: cover;
   object-position: top center;
-}.leader-photo { min-height: 240px; }
+}
 .leader-info { padding: 26px 24px 30px; display: flex; flex-direction: column; flex: 1; }
 .leader-role {
   align-self: center;
