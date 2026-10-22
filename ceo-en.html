@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b2031" />
+  <title>Mujahid Ali Sarder | CEO, MS Electric &amp; Suppliers</title>
+  <meta name="description" content="Mujahid Ali Sarder - CEO of MS Electric & Suppliers, Keshpur, Paschim Medinipur. IT & digital operations, ITI Wireman." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* ================= CEO PROFILE PAGE (ENGLISH) ================= */
+    :root {
+      --primary: #ff9800;
+      --primary-dark: #e68900;
+      --primary-soft: rgba(255, 152, 0, 0.14);
+      --navy: #0b2031;
+      --navy-2: #153856;
+      --text: #2b2f33;
+      --muted: #667085;
+      --bg: #f6f8fa;
+      --white: #ffffff;
+      --line: #e5eaef;
+      --whatsapp: #25d366;
+      --radius: 16px;
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', 'Noto Sans Bengali', system-ui, sans-serif;
+      color: var(--text); background: var(--bg); line-height: 1.7;
+      -webkit-tap-highlight-color: transparent;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 18px; }
+
+    /* ---------- Top nav ---------- */
+    .topnav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      box-shadow: var(--shadow-sm);
+    }
+    .topnav .container { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 12px; padding-bottom: 12px; }
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 8px; font-weight: 700;
+      color: var(--navy); background: var(--bg); padding: 8px 16px; border-radius: 50px; font-size: 0.9rem;
+    }
+    .back-btn:hover { background: var(--primary-soft); }
+    .brand { font-weight: 800; color: var(--navy); font-size: 1.15rem; }
+    .brand i { color: var(--primary); margin-right: 4px; }
+    .brand span { color: var(--primary); }
+    .lang-switch {
+      display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 0.85rem;
+      color: var(--navy); border: 1.5px solid var(--primary); padding: 6px 14px; border-radius: 50px;
+    }
+    .lang-switch:hover { background: var(--primary); }
+
+    /* ---------- Hero ---------- */
+    .profile-hero {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: var(--white); padding: 44px 0 90px; text-align: center;
+    }
+    .avatar {
+      width: 170px; height: 170px; border-radius: 50%; margin: 0 auto 18px;
+      border: 5px solid var(--primary); background: #d5dee7; overflow: hidden;
+      position: relative; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+    .avatar i { font-size: 4rem; color: #9aa9b8; }
+    .avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+    .role-badge {
+      display: inline-block; background: rgba(255, 152, 0, 0.2); color: var(--primary);
+      border: 1px solid rgba(255, 152, 0, 0.5); padding: 4px 18px; border-radius: 50px;
+      font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 10px;
+    }
+    .profile-hero h1 { font-size: 2.2rem; line-height: 1.25; margin-bottom: 8px; }
+    .profile-hero .tagline { color: #cbd7e2; max-width: 620px; margin: 0 auto 22px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 22px; border-radius: 12px; font-weight: 700; font-size: 0.95rem;
+      border: 2px solid transparent; cursor: pointer; font-family: inherit;
+      background: var(--primary); color: var(--navy); transition: all 0.25s ease;
+    }
+    .btn:hover { transform: translateY(-2px); background: var(--primary-dark); }
+    .btn:active { transform: scale(0.97); }
+    .btn-wa { background: var(--whatsapp); color: var(--white); }
+    .btn-wa:hover { background: #1ebe5a; }
+    .btn-ghost { background: transparent; border-color: rgba(255, 255, 255, 0.6); color: var(--white); }
+    .btn-ghost:hover { background: var(--white); color: var(--navy); }
+
+    /* ---------- Quick facts ---------- */
+    .facts { margin-top: -50px; position: relative; z-index: 5; }
+    .facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .fact {
+      background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-md);
+      padding: 18px 12px; text-align: center;
+    }
+    .fact i { color: var(--primary-dark); font-size: 1.3rem; margin-bottom: 6px; }
+    .fact strong { display: block; color: var(--navy); font-size: 0.98rem; line-height: 1.35; }
+    .fact span { color: var(--muted); font-size: 0.8rem; }
+
+    /* ---------- Cards / sections ---------- */
+    .block { padding: 34px 0 0; }
+    .card {
+      background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-sm);
+      padding: 26px 24px; margin-bottom: 20px;
+    }
+    .card h2 { color: var(--navy); font-size: 1.3rem; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+    .card h2 i {
+      width: 38px; height: 38px; border-radius: 50%; background: var(--primary-soft);
+      color: var(--primary-dark); display: inline-flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;
+    }
+    .card p { color: var(--muted); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    /* ---------- Timeline (education) ---------- */
+    .timeline { position: relative; padding-left: 26px; }
+    .timeline::before { content: ''; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+    .t-item { position: relative; margin-bottom: 18px; }
+    .t-item:last-child { margin-bottom: 0; }
+    .t-item::before {
+      content: ''; position: absolute; left: -26px; top: 6px; width: 16px; height: 16px;
+      border-radius: 50%; background: var(--white); border: 4px solid var(--primary);
+    }
+    .t-year { display: inline-block; font-weight: 700; color: var(--primary-dark); font-size: 0.85rem; }
+    .t-item h3 { color: var(--navy); font-size: 1.02rem; line-height: 1.4; }
+    .t-item p { font-size: 0.9rem; }
+
+    /* ---------- Tags / lists ---------- */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: var(--primary-soft); color: var(--navy); padding: 6px 14px;
+      border-radius: 50px; font-size: 0.88rem; font-weight: 600;
+    }
+    .check-list li { position: relative; padding-left: 28px; margin-bottom: 10px; color: var(--muted); }
+    .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-dark); font-weight: 800; }
+    .sub-label { display: block; font-weight: 700; color: var(--navy); margin: 14px 0 8px; font-size: 0.95rem; }
+    .sub-label:first-of-type { margin-top: 0; }
+
+    /* ---------- Skill bars ---------- */
+    .bar { margin-bottom: 14px; }
+    .bar-top { display: flex; justify-content: space-between; font-weight: 600; color: var(--navy); font-size: 0.92rem; margin-bottom: 5px; }
+    .bar-track { height: 9px; background: var(--line); border-radius: 50px; overflow: hidden; }
+    .bar-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--primary), var(--primary-dark)); border-radius: 50px; transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    /* ---------- Contact ---------- */
+    .contact-row { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .contact-row:last-child { border-bottom: 0; }
+    .contact-row .ci {
+      width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+      background: var(--primary-soft); color: var(--primary-dark);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-row strong { display: block; color: var(--navy); font-size: 0.85rem; }
+    .contact-row a, .contact-row span { color: var(--muted); word-break: break-word; }
+    .contact-row a:hover { color: var(--primary-dark); }
+
+    footer { background: #05101a; color: #a5b1bc; text-align: center; padding: 22px 0; margin-top: 30px; font-size: 0.9rem; }
+    footer a { color: var(--primary); }
+
+    /* ---------- Reveal ---------- */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width: 768px) {
+      body { padding-bottom: 76px; }
+      .brand { display: none; }
+      .profile-hero { padding: 32px 0 80px; }
+      .avatar { width: 140px; height: 140px; }
+      .profile-hero h1 { font-size: 1.6rem; }
+      .profile-hero .tagline { font-size: 0.92rem; }
+      .facts-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .fact { padding: 14px 8px; }
+      .fact strong { font-size: 0.88rem; }
+      .two-col { grid-template-columns: 1fr; gap: 0; }
+      .card { padding: 20px 16px; }
+      .card h2 { font-size: 1.15rem; }
+      .btn { padding: 11px 16px; font-size: 0.88rem; }
+
+      .sticky-bar {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; display: flex; gap: 10px;
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px); box-shadow: 0 -4px 20px rgba(11, 32, 49, 0.1);
+        border-top: 1px solid var(--line);
+      }
+      .sticky-bar .btn { flex: 1; }
+    }
+    @media (min-width: 769px) { .sticky-bar { display: none; } }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topnav">
+    <div class="container">
+      <a href="index.html#leaders" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+      <a href="index.html" class="brand"><i class="fas fa-bolt"></i>MS <span>Electric</span></a>
+      <a href="ceo.html" class="lang-switch"><i class="fas fa-globe"></i> বাংলা</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="profile-hero">
+    <div class="container">
+      <div class="avatar">
+        <i class="fas fa-user"></i>
+        <img src="images/CEO.jpg" alt="Mujahid Ali Sarder" onerror="this.remove()" />
+      </div>
+      <span class="role-badge">CEO</span>
+      <h1>MUJAHID ALI SARDER</h1>
+      <p class="tagline">CEO of MS Electric &amp; Suppliers. Skilled in IT and digital operations, data reporting and electrical systems.</p>
+      <div class="hero-actions">
+        <a href="tel:+917718616461" class="btn"><i class="fas fa-phone-alt"></i> Call</a>
+        <a href="https://wa.me/917718616461" target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="mailto:mujahidalisarder@gmail.com" class="btn btn-ghost"><i class="fas fa-envelope"></i> Email</a>
+        <button class="btn btn-ghost" id="saveContact" type="button"><i class="fas fa-address-book"></i> Save Contact</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick facts -->
+  <section class="facts">
+    <div class="container facts-grid">
+      <div class="fact reveal"><i class="fas fa-laptop-code"></i><strong>DSA Diploma</strong><span>Webel</span></div>
+      <div class="fact reveal"><i class="fas fa-plug"></i><strong>ITI Wireman</strong><span>Keshpur Government ITI</span></div>
+      <div class="fact reveal"><i class="fas fa-file-excel"></i><strong>Excel &amp; Sheets</strong><span>Data Reporting</span></div>
+      <div class="fact reveal"><i class="fas fa-language"></i><strong>3 Languages</strong><span>Bengali · English · Hindi</span></div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Career objective -->
+    <section class="block">
+      <div class="card reveal">
+        <h2><i class="fas fa-bullseye"></i> Career Objective</h2>
+        <p>A progressive and highly motivated IT and digital operations professional with comprehensive knowledge in computer applications (DSA) and technical expertise in electrical systems (ITI Wireman). Experienced in managing complex data structures, digital workflows, and field verification projects. Adept at combining technical skills with an academic background in Arts to streamline organizational efficiency, administrative coordination, and digital communications.</p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <div class="card reveal">
+        <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+        <ul class="check-list">
+          <li>Oversee comprehensive IT and digital operations, including social media management and digital strategy execution.</li>
+          <li>Supervise and manage the digital components of field activation tasks and verification projects, coordinating effectively with on-ground personnel.</li>
+          <li>Transform raw records, handwritten lists, and schedules into structured, professional Excel and Google Sheets reports.</li>
+          <li>Develop and implement automated digital communication structures, such as customized auto-responders, to streamline organizational messaging.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education & skill levels -->
+    <section class="two-col">
+      <div class="card reveal">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="timeline">
+          <div class="t-item">
+            <span class="t-year">Pursuing</span>
+            <h3>B.A. General (Regular)</h3>
+            <p>Sukumar Sengupta Mahavidyalaya</p>
+          </div>
+          <div class="t-item">
+            <span class="t-year">2024</span>
+            <h3>H.S.C (1st Division)</h3>
+            <p>West Bengal Council of Higher Secondary Education, Keshpur L.N High School</p>
+          </div>
+          <div class="t-item">
+            <span class="t-year">2022</span>
+            <h3>Secondary Education</h3>
+            <p>West Bengal Board of Secondary Education, Keshpur L.N High School</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h2><i class="fas fa-chart-line"></i> Skill Levels</h2>
+        <div class="bar"><div class="bar-top"><span>MS Office &amp; PowerPoint</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-w="90"></div></div></div>
+        <div class="bar"><div class="bar-top"><span>Excel &amp; Google Sheets</span><span>92%</span></div><div class="bar-track"><div class="bar-fill" data-w="92"></div></div></div>
+        <div class="bar"><div class="bar-top"><span>Digital Operations</span><span>88%</span></div><div class="bar-track"><div class="bar-fill" data-w="88"></div></div></div>
+        <div class="bar"><div class="bar-top"><span>Electrical Wiring</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+      </div>
+    </section>
+
+    <!-- Computer & IT -->
+    <section>
+      <div class="card reveal">
+        <h2><i class="fas fa-desktop"></i> Computer &amp; IT Skills</h2>
+        <span class="sub-label">Diploma</span>
+        <div class="tags"><span class="tag">Diploma in Software Application (DSA) – Webel</span></div>
+        <span class="sub-label">Office Applications &amp; Design</span>
+        <div class="tags"><span class="tag">MS Office Suite</span><span class="tag">PowerPoint</span><span class="tag">AI Image Generation Tools</span></div>
+        <span class="sub-label">Data &amp; Analytics</span>
+        <div class="tags"><span class="tag">MS Excel</span><span class="tag">Google Sheets</span><span class="tag">Advanced Data Structuring &amp; Reporting</span></div>
+        <span class="sub-label">Specialized IT Skills</span>
+        <div class="tags"><span class="tag">Hardware Maintenance</span><span class="tag">System Optimization</span><span class="tag">Internet &amp; Digital Communication</span><span class="tag">Digital Automation (Auto-responder Setup)</span></div>
+      </div>
+    </section>
+
+    <!-- ITI -->
+    <section>
+      <div class="card reveal">
+        <h2><i class="fas fa-bolt"></i> Technical Skills – ITI Wireman</h2>
+        <p style="margin-bottom:12px;">Course: ITI in Wireman (Pursuing) — Keshpur Government ITI</p>
+        <div class="tags">
+          <span class="tag">Electrical Wiring</span>
+          <span class="tag">Commercial Illumination &amp; Estimating</span>
+          <span class="tag">Earthing &amp; Circuit Protection</span>
+          <span class="tag">Machine Maintenance &amp; Wiring Regulations</span>
+          <span class="tag">Electrical Troubleshooting &amp; Testing</span>
+          <span class="tag">Basic Safety &amp; First Aid</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interpersonal & languages -->
+    <section class="two-col">
+      <div class="card reveal">
+        <h2><i class="fas fa-handshake"></i> Interpersonal Skills</h2>
+        <ul class="check-list">
+          <li>Strong problem-solving mindset with meticulous attention to detail.</li>
+          <li>Excellent organizational communication (written and verbal) and professional email writing skills.</li>
+          <li>Ability to work collaboratively in a team and complete tasks within strict deadlines.</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h2><i class="fas fa-language"></i> Languages</h2>
+        <div class="tags"><span class="tag">Bengali</span><span class="tag">English</span><span class="tag">Hindi</span></div>
+        <span class="sub-label" style="margin-top:18px;">Nationality</span>
+        <p>Indian</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <div class="card reveal">
+        <h2><i class="fas fa-address-card"></i> Contact</h2>
+        <div class="contact-row"><div class="ci"><i class="fas fa-phone-alt"></i></div><div><strong>Phone</strong><a href="tel:+917718616461">+91 77186 16461</a></div></div>
+        <div class="contact-row"><div class="ci"><i class="fab fa-whatsapp"></i></div><div><strong>WhatsApp</strong><a href="https://wa.me/917718616461" target="_blank" rel="noopener">Start a chat</a></div></div>
+        <div class="contact-row"><div class="ci"><i class="fas fa-envelope"></i></div><div><strong>Email</strong><a href="mailto:mujahidalisarder@gmail.com">mujahidalisarder@gmail.com</a></div></div>
+        <div class="contact-row"><div class="ci"><i class="fas fa-map-marker-alt"></i></div><div><strong>Address</strong><span>Keshpur, Paschim Medinipur, West Bengal - 721150</span></div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">&copy; <span id="year">2026</span> <a href="index.html">MS Electric &amp; Suppliers</a>. All rights reserved.</div>
+  </footer>
+
+  <!-- Mobile sticky bar -->
+  <div class="sticky-bar">
+    <a href="https://wa.me/917718616461" target="_blank" rel="noopener" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
+    <a href="tel:+917718616461" class="btn"><i class="fas fa-phone-alt"></i> Call</a>
+  </div>
+
+  <script>
+    // Reveal on scroll + fill skill bars
+    (function () {
+      var items = document.querySelectorAll('.reveal');
+      var bars = document.querySelectorAll('.bar-fill');
+
+      function fillBars(scope) {
+        scope.querySelectorAll('.bar-fill').forEach(function (b) {
+          b.style.width = b.getAttribute('data-w') + '%';
+        });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              fillBars(e.target);
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        items.forEach(function (el) { io.observe(el); });
+      } else {
+        items.forEach(function (el) { el.classList.add('visible'); });
+        bars.forEach(function (b) { b.style.width = b.getAttribute('data-w') + '%'; });
+      }
+    })();
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Save Contact (.vcf)
+    document.getElementById('saveContact').addEventListener('click', function () {
+      var vcf = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:Mujahid Ali Sarder',
+        'N:Sarder;Mujahid Ali;;;',
+        'ORG:MS Electric & Suppliers',
+        'TITLE:CEO',
+        'TEL;TYPE=CELL:+917718616461',
+        'EMAIL:mujahidalisarder@gmail.com',
+        'ADR;TYPE=WORK:;;Keshpur;Paschim Medinipur;West Bengal;721150;India',
+        'END:VCARD'
+      ].join('\r\n');
+      var blob = new Blob([vcf], { type: 'text/vcard' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'Mujahid-Ali-Sarder.vcf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    });
+  </script>
+</body>
+</html>
