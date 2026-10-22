@@ -342,14 +342,6 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
 }
-.leader-photo {
-  position: relative;
-  aspect-ratio: 4 / 4.2;
-  background: linear-gradient(135deg, #e7edf3, #d5dee7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .leader-photo { aspect-ratio: auto; }
 .leader-photo img { position: static; height: auto; object-fit: contain; }
 .leader-photo i { display: none; }
